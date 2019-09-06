@@ -29,7 +29,7 @@ public class AnagramDictionary {
     private static final int MAX_WORD_LENGTH = 7;
     private Random random = new Random();
 
-    public AnagramDictionary(Reader reader) throws IOException {
+    AnagramDictionary(Reader reader) throws IOException {
         BufferedReader in = new BufferedReader(reader);
         String line;
         while((line = in.readLine()) != null) {
@@ -37,11 +37,11 @@ public class AnagramDictionary {
         }
     }
 
-    public boolean isGoodWord(String word, String base) {
+    boolean isGoodWord(String word, String base) {
         return true;
     }
 
-    public List<String> getAnagrams(String targetWord) {
+    List<String> getAnagrams(String targetWord) {
         ArrayList<String> result = new ArrayList<String>();
         return result;
     }
@@ -51,7 +51,7 @@ public class AnagramDictionary {
         return result;
     }
 
-    public String pickGoodStarterWord() {
+    String pickGoodStarterWord() {
         return "stop";
     }
 }
