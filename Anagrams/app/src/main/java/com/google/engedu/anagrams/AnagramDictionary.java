@@ -78,6 +78,7 @@ class AnagramDictionary {
 //        }
 //        return result;
         // TODO: What happened here? Ask this next week
+        //his part is to cancel the effect of pressing 'enter' when no Anagram word is entered in the given tab
         if (targetWord == null || targetWord.equals(""))
             return null;
 
@@ -116,6 +117,13 @@ class AnagramDictionary {
 
     // TODO: Homework next week
     protected String pickGoodStarterWord() {
-        return "ore";
+          int num1;
+        while(true) {
+             num1 = random.nextInt(wordsList.size());
+            String value = sortLetters(wordsList.get(num1));
+            if(lettersToWord.get(value).size()> MIN_NUM_ANAGRAMS)
+                break;
+       }
+       return wordsList.get(num1);
     }
 }
